@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema4_1</title>
+</head>
+<body>
+    <input type="number" id="casuta1">
+    <button id="adauga" onclick="save()">Add</button><br><br>
+    <button onclick="checkmax()" >Check Max</button><br><br>
+    <button onclick="suma()">Suma</button>
+    <script>
+    let numar = []
+    let i = 0 
+    function save(){
+        let x = Number(document.getElementById("casuta1").value)           
+        numar[numar.length] = x
+        console.log(numar)
+        console.log(numar.length)
+    }
+    function suma(){
+    let sum = 0
+    for (let i = 0; i < numar.length; i=i+1) {
+        x = numar[i]
+        sum = x + sum
+    }
+    console.log(sum)
+    }
+    function checkmax(){
+
+    let max = numar[0]
+    for(i = 0; i<numar.length; i++){
+        if(numar[i] > max){
+            max = numar[i]
+        }
+    }
+     console.log(max)
+    }
+
+
+    
+
+    </script>
+</body>
+</html>
